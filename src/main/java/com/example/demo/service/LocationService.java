@@ -4,6 +4,6 @@ import com.example.demo.entity.LocationEntity;
 
 public interface LocationService {
 LocationEntity createlocation(LocationEntity location);
-List&lt;LocationEntity&gt; getAllLocations();
+List<LocationEntity> getAllLocations();
 
 }

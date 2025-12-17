@@ -14,13 +14,13 @@ public class LocationController {
 @Autowired
 private LocationService locationService;
 
-@PostMapping(&quot;/addlocation&quot;)
+@PostMapping("/addlocation")
 public LocationEntity createlocation(@RequestBody LocationEntity le) {
 return locationService.createlocation(le);
 }
 
-@GetMapping(&quot;/showlocations&quot;)
-public List&lt;LocationEntity&gt; showlocations() {
+@GetMapping("/showlocations")
+public List<LocationEntity> showlocations() {
 return locationService.getAllLocations();
 }
 }

@@ -20,7 +20,7 @@ return locationRepo.save(le);
 }
 
 @Override
-public List&lt;LocationEntity&gt; getAllLocations() {
+public List<LocationEntity> getAllLocations() {
 return locationRepo.findAll();
 }
 }
