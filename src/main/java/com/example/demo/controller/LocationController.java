@@ -1,0 +1,26 @@
+package com.example.demo.controller;
+
+import java.util.List;
+
+import com.example.demo.entity.LocationEntity;
+import com.example.demo.service.LocationService;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+public class LocationController {
+
+@Autowired
+private LocationService locationService;
+
+@PostMapping(&quot;/addlocation&quot;)
+public LocationEntity createlocation(@RequestBody LocationEntity le) {
+return locationService.createlocation(le);
+}
+
+@GetMapping(&quot;/showlocations&quot;)
+public List&lt;LocationEntity&gt; showlocations() {
+return locationService.getAllLocations();
+}
+}
